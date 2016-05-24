@@ -1,0 +1,20 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.flex-warp{
+  display: flex;
+}
+.flex-warp .info{
+  flex: 1;
+
+}
+.samll{
+  font-size: 12px;
+  color: #777;
+}
