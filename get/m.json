@@ -1,0 +1,402 @@
+[
+    {
+        "id": 0,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "玩美房东",
+        "author": "寂寞的舞者",
+        "url": "http://www.biqugex.com/book_139/"
+    },
+    {
+        "id": 1,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "天火大道",
+        "author": "唐家三少",
+        "url": "http://www.biqugex.com/book_529/"
+    },
+    {
+        "id": 2,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "都市兵王",
+        "author": "河帅",
+        "url": "http://www.biqugex.com/book_3708/"
+    },
+    {
+        "id": 3,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "都市少帅",
+        "author": "一起成功",
+        "url": "http://www.biqugex.com/book_467/"
+    },
+    {
+        "id": 4,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "红色仕途",
+        "author": "鸿蒙树",
+        "url": "http://www.biqugex.com/book_162/"
+    },
+    {
+        "id": 5,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "闪婚老公太凶猛",
+        "author": "温煦依依",
+        "url": "http://www.biqugex.com/book_15282/"
+    },
+    {
+        "id": 6,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "乡村少年",
+        "author": "逍遥夫子",
+        "url": "http://www.biqugex.com/book_2855/"
+    },
+    {
+        "id": 7,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "桃运天王",
+        "author": "断章",
+        "url": "http://www.biqugex.com/book_4778/"
+    },
+    {
+        "id": 8,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "极品全能学生",
+        "author": "花都大少",
+        "url": "http://www.biqugex.com/book_6899/"
+    },
+    {
+        "id": 9,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "花都贴身高手",
+        "author": "柴米油盐",
+        "url": "http://www.biqugex.com/book_861/"
+    },
+    {
+        "id": 10,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "妙手神医",
+        "author": "羽少",
+        "url": "http://www.biqugex.com/book_8084/"
+    },
+    {
+        "id": 11,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "很纯很暧昧",
+        "author": "鱼人二代",
+        "url": "http://www.biqugex.com/book_876/"
+    },
+    {
+        "id": 12,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "美女上司的贴身兵王",
+        "author": "黑夜不寂寞",
+        "url": "http://www.biqugex.com/book_8091/"
+    },
+    {
+        "id": 13,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "校园修真高手",
+        "author": "木榆",
+        "url": "http://www.biqugex.com/book_21601/"
+    },
+    {
+        "id": 14,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "官榜",
+        "author": "隐为者",
+        "url": "http://www.biqugex.com/book_767/"
+    },
+    {
+        "id": 15,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "大影帝",
+        "author": "苏释晨来了",
+        "url": "http://www.biqugex.com/book_540/"
+    },
+    {
+        "id": 16,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "都市全能高手",
+        "author": "安山狐狸",
+        "url": "http://www.biqugex.com/book_4181/"
+    },
+    {
+        "id": 17,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "神医狂妃：天才召唤师",
+        "author": "MS芙子",
+        "url": "http://www.biqugex.com/book_399/"
+    },
+    {
+        "id": 18,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "极品透视",
+        "author": "赤焰圣歌",
+        "url": "http://www.biqugex.com/book_7075/"
+    },
+    {
+        "id": 19,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "枭王",
+        "author": "朽木可雕",
+        "url": "http://www.biqugex.com/book_14894/"
+    },
+    {
+        "id": 20,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "医道特种兵",
+        "author": "西瓜败火",
+        "url": "http://www.biqugex.com/book_19155/"
+    },
+    {
+        "id": 21,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "官心",
+        "author": "香自寒",
+        "url": "http://www.biqugex.com/book_8098/"
+    },
+    {
+        "id": 22,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "星戒",
+        "author": "空神",
+        "url": "http://www.biqugex.com/book_4335/"
+    },
+    {
+        "id": 23,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "官声",
+        "author": "格鱼",
+        "url": "http://www.biqugex.com/book_8802/"
+    },
+    {
+        "id": 24,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "发个微信去天庭",
+        "author": "台灯下的节奏",
+        "url": "http://www.biqugex.com/book_19935/"
+    },
+    {
+        "id": 25,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "歌王",
+        "author": "葱爆洋葱",
+        "url": "http://www.biqugex.com/book_25429/"
+    },
+    {
+        "id": 26,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "极品邪少",
+        "author": "掠痕12",
+        "url": "http://www.biqugex.com/book_864/"
+    },
+    {
+        "id": 27,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "通天官路",
+        "author": "御史大夫",
+        "url": "http://www.biqugex.com/book_7265/"
+    },
+    {
+        "id": 28,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "我的大脑里有电脑",
+        "author": "爱之",
+        "url": "http://www.biqugex.com/book_459/"
+    },
+    {
+        "id": 29,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "绝世大明星",
+        "author": "俗人小黑",
+        "url": "http://www.biqugex.com/book_10614/"
+    },
+    {
+        "id": 30,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "黄金渔场",
+        "author": "全金属弹壳",
+        "url": "http://www.biqugex.com/book_5571/"
+    },
+    {
+        "id": 31,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "非常村官",
+        "author": "洞房不败.",
+        "url": "http://www.biqugex.com/book_926/"
+    },
+    {
+        "id": 32,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "我的完美校花",
+        "author": "酒香",
+        "url": "http://www.biqugex.com/book_585/"
+    },
+    {
+        "id": 33,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "近身兵王",
+        "author": "月下吟",
+        "url": "http://www.biqugex.com/book_4160/"
+    },
+    {
+        "id": 34,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "宝鉴",
+        "author": "打眼",
+        "url": "http://www.biqugex.com/book_44/"
+    },
+    {
+        "id": 35,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "不良之谁与争锋",
+        "author": "抚琴的人",
+        "url": "http://www.biqugex.com/book_186/"
+    },
+    {
+        "id": 36,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "泡妞宝鉴",
+        "author": "天地知我心二",
+        "url": "http://www.biqugex.com/book_4201/"
+    },
+    {
+        "id": 37,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "超级无良学生",
+        "author": "十指炫舞",
+        "url": "http://www.biqugex.com/book_507/"
+    },
+    {
+        "id": 38,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "黑道特种兵",
+        "author": "巅峰残狼",
+        "url": "http://www.biqugex.com/book_5206/"
+    },
+    {
+        "id": 39,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "萌妻很纯情：二嫁亿万继承者",
+        "author": "麻辣千金",
+        "url": "http://www.biqugex.com/book_2/"
+    },
+    {
+        "id": 40,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "超级学生",
+        "author": "公子诺",
+        "url": "http://www.biqugex.com/book_4587/"
+    },
+    {
+        "id": 41,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "华佗宝典",
+        "author": "我吃肉夹馍",
+        "url": "http://www.biqugex.com/book_4352/"
+    },
+    {
+        "id": 42,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "权力巅峰",
+        "author": "梦入洪荒",
+        "url": "http://www.biqugex.com/book_246/"
+    },
+    {
+        "id": 43,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "极品富二代",
+        "author": "老施",
+        "url": "http://www.biqugex.com/book_1759/"
+    },
+    {
+        "id": 44,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "大仙医",
+        "author": "闷骚的蝎子",
+        "url": "http://www.biqugex.com/book_4113/"
+    },
+    {
+        "id": 45,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "超级兵痞",
+        "author": "痞子老妖",
+        "url": "http://www.biqugex.com/book_4197/"
+    },
+    {
+        "id": 46,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "女总裁的贴身高手",
+        "author": "笑笑星儿",
+        "url": "http://www.biqugex.com/book_796/"
+    },
+    {
+        "id": 47,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "狂龙战狼",
+        "author": "九界第一少",
+        "url": "http://www.biqugex.com/book_26135/"
+    },
+    {
+        "id": 48,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "极品乡村生活",
+        "author": "名窑",
+        "url": "http://www.biqugex.com/book_257/"
+    },
+    {
+        "id": 49,
+        "class": "[都市]",
+        "class_id": 1,
+        "title": "官门",
+        "author": "叨狼",
+        "url": "http://www.biqugex.com/book_7783/"
+    }
+]
