@@ -32,13 +32,14 @@ function resolveHtml(data){
        // console.log(list[i].children)
        _data.id = listDom[i].children[0].children[0].data;
        _data.title = $(listDom[i].children[1]).text()
+       _data.url = $(listDom[i].children[1]).children('a').attr('href')
        _data.type = $(listDom[i].children[2]).text()
        _data.author = $(listDom[i].children[3]).text()
        _data.size = $(listDom[i].children[5]).text()
        list.push(_data)
    }
    console.log(list)
-    save(JSON.stringify(list))
+    save(JSON.stringify(list,null,4))
 
 
 }
