@@ -116,7 +116,7 @@ function create(cb) {
       },
       function(res, cb) {
         cb(res);
-        box.end();
+       // box.end();
       }
     ], cb);
   }, cb);
