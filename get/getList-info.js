@@ -7,7 +7,7 @@ var cheerio = require('cheerio');
 var iconv = require('iconv-lite');
 var BufferHelper = require('bufferhelper');
 var urls = require('../get/m-info.json');
-var num = 12;
+var num = 238;
 var baseUrl = urls[num];
 var updata = require('../get/updata_list.js');
 // var insert_menu = require('../get/updata_menu.js');
@@ -19,13 +19,13 @@ var cps = require('cps');
 var db = require('node-mysql');
 var DB = db.DB;
 var dataAyy = {};
-
+var timeout = false;
 function one(url) {
 
     dataAyy.info = {};
     dataAyy.list = [];
-    cai_save_id(num, 'list', function () {
-        var timeout = false;
+  //  cai_save_id(num, 'list', function () {
+
         var req = requestWithTimeout(url, 10000, function (res) {
             var bufferHelper = new BufferHelper();
             res.on('data', function (chunk) {
@@ -45,7 +45,7 @@ function one(url) {
         req.on('error', function (e) {
             console.log('error got :' + e.message);
         }).on('timeout', function (e) {
-            timeout =true
+            timeout =true;
             console.log('timeout got :' + e.message);
 
             if (resGetNum >= 3) {
@@ -63,6 +63,7 @@ function one(url) {
                 i--;
                 if (i <= 0) {
                     clearInterval(_t);
+                    timeout =false
                     one(urls[num]);
                 }
             }, 1000)
@@ -70,7 +71,7 @@ function one(url) {
 
         })
 
-    });
+  //  });
 
 
     function resolveHtml(result) {
@@ -222,12 +223,13 @@ function size(string) {
 }
 
 function nextList() {
-    console.log('等5秒,下一条list记录')
+    console.log('2秒,下一条list记录')
 
     setTimeout(function () {
         num++;
         dataAyy ={};
+        timeout =false
         one(urls[num])
-    }, 5000)
+    }, 2000)
 
 }

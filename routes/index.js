@@ -1,19 +1,14 @@
 var express = require('express');
 var router = express.Router();
 var Mock = require('mockjs');
-var Random = Mock.Random;
+var path = require('path');
 
 
 var cps = require('cps');
 var db = require('node-mysql');
 var DB = db.DB;
 
-var box = new DB({
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'xiaoshuo',
-});
+
 
 
 
@@ -43,95 +38,81 @@ router.get('/article', function(req, res, next) {
 
 /* GET info page. */
 router.get('/info/id/:id', function(req, res, next) {
-  info(function (db_data) {
+var id = req.params.id
+  info(id,function (db_data) {
     var data ={};
-    // console.log(db_data)
-    data.status = '1';
-    data.info = '成功';
-    data.list = db_data[0];
-    res.jsonp(data);
+    info_list(id,function (res_list) {
+      data.menu_list = res_list;
+      data.status = '1';
+      data.info = '成功';
+      data.list = db_data[0];
+      res.jsonp(data);
+    })
+
   });
 });
 
 
-/*
 
-
-//生成数据
-function createArticle() {
-  var data = Mock.mock({
-
-      title: function () {
-        return Random.ctitle(5,20)
-      },
-      author: function () {
-        return Random.ctitle(2,6)
-      },
-      content: function () {
-        return Random.cparagraph(20,60)
-      },
-      time: function () {
-        return Random.now('yyyy-MM-dd HH:mm:ss')
-      }
-
-
-  })
-  return data
-}
-
-//生成数据
-function create2() {
-  var data = Mock.mock({
-    // 属性 list 的值是一个数组，其中含有 1 到 10 个元素
-    'list|10-35': [{
-      // 属性 id 是一个自增数，起始值为 1，每次增 1
-      'id|+1': 1,
-      title: function () {
-        return Random.ctitle(5,20)
-      },
-      author: function () {
-        return Random.ctitle(2,6)
-      },
-      size: function () {
-        return Random.natural(100,9999)
-      },
-      time: function () {
-        return Random.now('yyyy-MM-dd HH:mm:ss')
-      },
-      img:function () {
-        return Random.image('50x70', '#f5f5f5')
-      }
-    }]
-  })
-  return data
-}
-*/
 
 
 //首页数据
 function create(cb) {
+  var box = new DB({
+    host     : 'localhost',
+    user     : 'root',
+    password : '',
+    database : 'xiaoshuo',
+  });
   box.connect(function(conn, cb) {
     cps.seq([
       function(_, cb) {
-        conn.query('SELECT id,title,author,img FROM list limit 0,30', cb);
+        conn.query('SELECT list.id, list.`class_id`, list.`title`, list.`author`, list.`img`, list.`size`, class.`class_name` FROM LIST LEFT JOIN class ON list.class_id = class.`id` ORDER BY list.`size` DESC LIMIT 0, 30 ', cb);
       },
       function(res, cb) {
         cb(res);
-       // box.end();
+       box.end();
       }
     ], cb);
   }, cb);
 }
 
-//首页数据
-function info(cb) {
+//首页数据2
+function info(id,cb) {
+  var box = new DB({
+    host     : 'localhost',
+    user     : 'root',
+    password : '',
+    database : 'xiaoshuo',
+  });
   box.connect(function(conn, cb) {
     cps.seq([
       function(_, cb) {
-        conn.query('SELECT list.id,list.`class_id`,list.`title`,list.`author`,list.`jianjie`,list.`img`,list.`size`,list.`tuijian`,class.`class_name` FROM LIST LEFT JOIN class ON list.class_id = class.`id` WHERE list.id = "4"', cb);
+        conn.query('SELECT list.id,list.`class_id`,list.`title`,list.`author`,list.`jianjie`,list.`img`,list.`size`,list.`add_time`,class.`class_name` FROM LIST LEFT JOIN class ON list.class_id = class.`id` WHERE list.id ='+id , cb);
       },
       function(res, cb) {
         cb(res);
+        box.end();
+      }
+    ], cb);
+  }, cb);
+}
+//首页数据2
+function info_list(id,cb) {
+  var box = new DB({
+    host     : 'localhost',
+    user     : 'root',
+    password : '',
+    database : 'xiaoshuo',
+  });
+  box.connect(function(conn, cb) {
+    cps.seq([
+      function(_, cb) {
+        conn.query('SELECT menu.id,menu.`menu_name` FROM menu LEFT JOIN LIST ON list.id = menu.`title_id` WHERE list.id ='+id+' LIMIT 0, 30', cb);
+      },
+      function(res, cb) {
+        cb(res);
+        box.end();
       }
     ], cb);
   }, cb);
