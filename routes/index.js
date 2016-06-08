@@ -8,7 +8,12 @@ var cps = require('cps');
 var db = require('node-mysql');
 var DB = db.DB;
 
-
+var dbInfo ={
+  host     : '112.74.93.37',
+  user     : 'root',
+  password : '12300',
+  database : 'xiaoshuo',
+}
 
 
 
@@ -38,7 +43,7 @@ router.get('/article', function(req, res, next) {
 
 /* GET info page. */
 router.get('/info/id/:id', function(req, res, next) {
-var id = req.params.id
+var id = req.params.id;
   info(id,function (db_data) {
     var data ={};
     info_list(id,function (res_list) {
@@ -58,16 +63,11 @@ var id = req.params.id
 
 //首页数据
 function create(cb) {
-  var box = new DB({
-    host     : 'localhost',
-    user     : 'root',
-    password : '',
-    database : 'xiaoshuo',
-  });
+  var box = new DB(dbInfo);
   box.connect(function(conn, cb) {
     cps.seq([
       function(_, cb) {
-        conn.query('SELECT list.id, list.`class_id`, list.`title`, list.`author`, list.`img`, list.`size`, class.`class_name` FROM LIST LEFT JOIN class ON list.class_id = class.`id` ORDER BY list.`size` DESC LIMIT 0,30 ', cb);
+        conn.query('SELECT list.id, list.`class_id`, list.`title`, list.`author`, list.`img`, list.`size`, class.`class_name` FROM `list` LEFT JOIN class ON list.class_id = class.`id` ORDER BY list.`size` DESC LIMIT 0,30', cb);
       },
       function(res, cb) {
         cb(res);
@@ -79,16 +79,11 @@ function create(cb) {
 
 //首页数据2
 function info(id,cb) {
-  var box = new DB({
-    host     : 'localhost',
-    user     : 'root',
-    password : '',
-    database : 'xiaoshuo',
-  });
+  var box = new DB(dbInfo);
   box.connect(function(conn, cb) {
     cps.seq([
       function(_, cb) {
-        conn.query('SELECT list.id,list.`class_id`,list.`title`,list.`author`,list.`jianjie`,list.`img`,list.`size`,list.`add_time`,class.`class_name` FROM LIST LEFT JOIN class ON list.class_id = class.`id` WHERE list.id ='+id , cb);
+        conn.query('SELECT list.id,list.`class_id`,list.`title`,list.`author`,list.`jianjie`,list.`img`,list.`size`,list.`add_time`,class.`class_name` FROM `list` LEFT JOIN class ON list.class_id = class.`id` WHERE list.id ='+id , cb);
       },
       function(res, cb) {
         cb(res);
@@ -99,16 +94,11 @@ function info(id,cb) {
 }
 //首页数据2
 function info_list(id,cb) {
-  var box = new DB({
-    host     : 'localhost',
-    user     : 'root',
-    password : '',
-    database : 'xiaoshuo',
-  });
+  var box = new DB(dbInfo);
   box.connect(function(conn, cb) {
     cps.seq([
       function(_, cb) {
-        conn.query('SELECT menu.id,menu.`menu_name` FROM menu LEFT JOIN LIST ON list.id = menu.`title_id` WHERE list.id ='+id+' LIMIT 0,30', cb);
+        conn.query('SELECT menu.id,menu.`menu_name` FROM menu LEFT JOIN `list` ON list.id = menu.`title_id` WHERE list.id ='+id+' LIMIT 0,30', cb);
       },
       function(res, cb) {
         cb(res);
