@@ -67,7 +67,7 @@ function create(cb) {
   box.connect(function(conn, cb) {
     cps.seq([
       function(_, cb) {
-        conn.query('SELECT list.id, list.`class_id`, list.`title`, list.`author`, list.`img`, list.`size`, class.`class_name` FROM LIST LEFT JOIN class ON list.class_id = class.`id` ORDER BY list.`size` DESC LIMIT 0, 30 ', cb);
+        conn.query('SELECT list.id, list.`class_id`, list.`title`, list.`author`, list.`img`, list.`size`, class.`class_name` FROM LIST LEFT JOIN class ON list.class_id = class.`id` ORDER BY list.`size` DESC LIMIT 0,30 ', cb);
       },
       function(res, cb) {
         cb(res);
@@ -108,7 +108,7 @@ function info_list(id,cb) {
   box.connect(function(conn, cb) {
     cps.seq([
       function(_, cb) {
-        conn.query('SELECT menu.id,menu.`menu_name` FROM menu LEFT JOIN LIST ON list.id = menu.`title_id` WHERE list.id ='+id+' LIMIT 0, 30', cb);
+        conn.query('SELECT menu.id,menu.`menu_name` FROM menu LEFT JOIN LIST ON list.id = menu.`title_id` WHERE list.id ='+id+' LIMIT 0,30', cb);
       },
       function(res, cb) {
         cb(res);
