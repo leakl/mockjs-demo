@@ -20,9 +20,10 @@ function list_info_fun(list_info,cai_menu_url,callback) {
                     conn.query(sql, cb);
                 },
                 function(res, cb) {
+                    if(!res){
+                        console.log(res,999999)
+                    }
                     if(res.affectedRows == 1){
-
-//conn.query('SELECT id FROM list WHERE cai_menu_url = "'+cai_menu_url+'" ');
                         var getID = function(cb2) {
                                 cps.seq([
                                     function(_, cb2) {

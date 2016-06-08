@@ -13,7 +13,6 @@ var box = new DB({
   user     : 'root',
   password : '',
   database : 'xiaoshuo',
-  connectionLimit: 50,
 });
 
 
@@ -55,6 +54,7 @@ router.get('/info/id/:id', function(req, res, next) {
 });
 
 
+/*
 
 
 //生成数据
@@ -105,6 +105,7 @@ function create2() {
   })
   return data
 }
+*/
 
 
 //首页数据
