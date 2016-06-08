@@ -98,7 +98,7 @@ function info_list(id,cb) {
   box.connect(function(conn, cb) {
     cps.seq([
       function(_, cb) {
-        conn.query('SELECT menu.id,menu.`menu_name` FROM menu LEFT JOIN `list` ON list.id = menu.`title_id` WHERE list.id ='+id+' LIMIT 0,30', cb);
+        conn.query('SELECT menu.id,menu.`menu_name` FROM menu LEFT JOIN `list` ON list.id = menu.`title_id` WHERE list.id ='+id+' LIMIT 0,15', cb);
       },
       function(res, cb) {
         cb(res);
