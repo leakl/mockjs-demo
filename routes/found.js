@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
          }else{
              data = {status:1,info:'失败',list:[]}
          }
-         
+         console.log(res)
          
      })
       
