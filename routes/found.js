@@ -1,34 +1,52 @@
 var express = require('express');
 var router = express.Router();
-var Mock = require('mockjs');
-var Random = Mock.Random;
+var cps = require('cps');
+var db = require('node-mysql');
+var DB = db.DB;
 
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    var data = create();
-    data.status = '1';
-    data.info = '成功';
-    res.jsonp(data);
+     var data =''
+     getList(function(res){
+         var data = {status:0,info:'成功',list:[]}
+         if(res){
+             data.list =res;
+         }else{
+             data = {status:1,info:'失败',list:[]}
+         }
+         
+         
+     })
+      
+     res.render('index', data);
+   
 });
 
-//生成数据
-function create() {
-    var data = Mock.mock({
-        // 属性 list 的值是一个数组，其中含有 1 到 10 个元素
-        'list|15': [{
-            // 属性 id 是一个自增数，起始值为 1，每次增 1
-            'id|+1': 1,
-            title: function () {
-                return Random.ctitle(5,20)
-            },
+//生成数据var db = require('node-mysql');
 
-            img:function () {
-                return Random.image('40x40', '#f5f5f8')
-            }
-        }]
-    })
-    return data
+
+var dbInfo ={
+  host     : 'location',
+  user     : 'root',
+  password : '',
+  database : 'xiaoshuo',
+}
+
+//首页数据2
+function getList(cb) {
+  var box = new DB(dbInfo);
+  box.connect(function(conn, cb) {
+    cps.seq([
+      function(_, cb) {
+        conn.query('SELECT id,title_id,add_time,url FROM article order by id desc LIMIT 0,5', cb);
+      },
+      function(res, cb) {
+        cb(res);
+        box.end();
+      }
+    ], cb);
+  }, cb);
 }
 
 module.exports = router;
