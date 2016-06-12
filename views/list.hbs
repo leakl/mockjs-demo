@@ -1,0 +1,26 @@
+<p>列表：{{info}}</p>
+<ul>
+{{#each list}}
+    {{#if cai_status}}
+        <li>
+            <a href="/found/detail_id/{{id}}/" class="flex-warp">
+                <div class="info">
+                    <div>{{menu_name}}</div>
+                    <div class="author samll">{{add_time}}</div>
+                </div>
+            </a>
+        </li>
+{{else}}
+        <li >
+            <a href="javascrit:;" class="flex-warp" style="color: #888">
+                <div class="info">
+                    <div>{{menu_name}}</div>
+                    <div class="author samll">{{add_time}}</div>
+                </div>
+            </a>
+        </li>
+{{/if}}
+{{/each}}
+</ul>
+
+

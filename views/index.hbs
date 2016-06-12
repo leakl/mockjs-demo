@@ -1,14 +1,20 @@
-<p>内容：</p>
+<p>标题：{{info}}</p>
 <ul>
-    {{#each data.list}}
-        <li class="flex-warp">
-           
-            <div class="info">
-                <div>{{id}} - {{title_id}} - {{add_time}}</div>
-                <div class="author samll">{{url}}</div>
-               
-            </div>
+    {{#each list}}
+        <li>
+            <a href="/found/list_id/{{id}}/" class="flex-warp">
+                <div class="img" style="margin-right: 10px;">
+                    <img src="{{img}}" width="45" height="60" alt="">
+                </div>
+                <div class="info">
+                    <div class="title">{{title}}</div>
+                    <div class="author samll">{{class_name}} {{author}}</div>
+
+                </div>
+            </a>
 
         </li>
     {{/each}}
 </ul>
+
+

@@ -9,9 +9,9 @@ var db = require('node-mysql');
 var DB = db.DB;
 
 var dbInfo ={
-  host     : '112.74.93.37',
+  host     : 'localhost',
   user     : 'root',
-  password : '12300',
+  password : '',
   database : 'xiaoshuo',
 }
 

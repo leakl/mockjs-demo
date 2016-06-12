@@ -1,10 +1,19 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0px;
+  font: 14px/1.5 "Lucida Grande", Helvetica, Arial, sans-serif;
+
 }
 
 a {
-  color: #00B7FF;
+  color: #222;
+  text-decoration: none;
+
+}
+a:hover{
+  text-decoration: none;
+}
+a:active{
+  background-color: #f5f5f5;
 }
 
 .flex-warp{
@@ -17,4 +26,19 @@ a {
 .samll{
   font-size: 12px;
   color: #777;
+}
+ul,li{
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+li a{
+  padding: 15px 0;
+  border-bottom: solid 1px #ddd;
+}
+li a .img{
+  background-color: #f5f5f5;
+}
+li a .img img{
+  display: block;
 }
